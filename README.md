@@ -6,7 +6,7 @@ This repository contains sample Spring Boot and Quarkus application that exposes
 
 The goal of this project was to showcase how to instrumentation your application and collect and monitor application's metrics running inside docker compose.
 
-More detail in this article written in PT-BR: [Observabilidade: Monitorando sua aplicação a partir de métricas](https://medium.com/@guilherme.zarelli/observabilidade-monitorando-sua-aplica%C3%A7%C3%A3o-a-partir-de-m%C3%A9tricas-bd1b2d0ba1f8)
+More detail in this article written in PT-BR: [Observabilidade: Monitorando sua aplicação a partir de métricas](https://medium.com/luizalabs/observabilidade-monitorando-sua-aplicacao-a-partir-de-metricas-bd1b2d0ba1f8)
 
 # Architecture
 
