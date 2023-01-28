@@ -1,0 +1,16 @@
+version: "3"
+services:
+
+  java-quarkus-metrics:
+    image: helpdev/java-quarkus-metrics
+    container_name: java-quarkus-metrics
+    restart: always
+    ports:
+      - 8080:8080
+
+  java-spring-metrics:
+    image: helpdev/java-spring-metrics
+    container_name: java-spring-metrics
+    restart: always
+    ports:
+      - 8081:8081

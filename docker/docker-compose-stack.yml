@@ -1,0 +1,28 @@
+version: "3"
+services:
+
+  prometheus:
+    image: prom/prometheus:v2.26.0
+    container_name: prometheus
+    restart: always
+    network_mode: host
+    expose:
+      - 9090
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+
+  grafana:
+    image: grafana/grafana:9.3.4
+    container_name: grafana
+    network_mode: host
+    expose:
+      - 3000
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+    volumes:
+      - ./grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards
+      - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
+    depends_on:
+      - prometheus
